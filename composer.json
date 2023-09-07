@@ -1,18 +1,18 @@
 {
-    "name": "althinect/filament-spatie-roles-permissions",
+    "name": "solution-work/filament-spatie-roles-permissions-althinect",
     "description": "",
     "keywords": [
         "althinect",
         "filament-spatie-roles-permissions"
     ],
-    "homepage": "https://github.com/althinect/filament-spatie-roles-permissions",
+    "homepage": "https://github.com/solution-work/filament-spatie-roles-permissions-althinect",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Tharinda Rodrigo",
-            "email": "tharindarodrigo@gmail.com",
-            "role": "Developer"
+            "name": "Solution-Work",
+            "email": "info@solution-work.de",
+            "role": "Company"
         }
     ],
     "require": {
@@ -46,10 +46,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Althinect\\FilamentSpatieRolesPermissions\\FilamentSpatieRolesPermissionsServiceProvider"
+                "solution-work\\FilamentSpatieRolesPermissions\\FilamentSpatieRolesPermissionsServiceProvider"
             ],
             "aliases": {
-                "FilamentSpatieRolesPermissions": "Althinect\\FilamentSpatieRolesPermissions\\FilamentSpatieRolesPermissionsFacade"
+                "FilamentSpatieRolesPermissions": "Solution-Work\\FilamentSpatieRolesPermissions\\FilamentSpatieRolesPermissionsFacade"
             }
         }
     }
