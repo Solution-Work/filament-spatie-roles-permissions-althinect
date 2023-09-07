@@ -8,6 +8,7 @@ use Althinect\FilamentSpatieRolesPermissions\Resources\RoleResource\Pages\ListRo
 use Althinect\FilamentSpatieRolesPermissions\Resources\RoleResource\Pages\ViewRole;
 use Althinect\FilamentSpatieRolesPermissions\Resources\RoleResource\RelationManager\PermissionRelationManager;
 use Althinect\FilamentSpatieRolesPermissions\Resources\RoleResource\RelationManager\UserRelationManager;
+use Filament\Facades\Filament;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\MultiSelect;
@@ -16,6 +17,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
+use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Spatie\Permission\Models\Role;
 
@@ -57,7 +59,6 @@ class RoleResource extends Resource
                         Grid::make(2)
                             ->schema([
                                 TextInput::make('name')
-                                    ->required()
                                     ->label(__('filament-spatie-roles-permissions::filament-spatie.field.name')),
                                 Select::make('guard_name')
                                     ->label(__('filament-spatie-roles-permissions::filament-spatie.field.guard_name'))
@@ -99,10 +100,10 @@ class RoleResource extends Resource
             ->filters([
 
             ])->actions([
-            ViewAction::make('settings')
-                ->label('Einstellungen')
-                ->url(fn ($record) => route('set-permissions', $record->id))
-        ]);
+                ViewAction::make('settings')
+                    ->label('Einstellungen')
+                    ->url(fn ($record) => route('set-permissions', $record->id))
+            ]);
     }
 
     public static function getRelations(): array
