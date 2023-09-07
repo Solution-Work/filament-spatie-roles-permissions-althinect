@@ -98,7 +98,11 @@ class RoleResource extends Resource
             ])
             ->filters([
 
-            ]);
+            ])->actions([
+            ViewAction::make('settings')
+                ->label('Einstellungen')
+                ->url(fn ($record) => route('set-permissions', $record->id))
+        ]);
     }
 
     public static function getRelations(): array
