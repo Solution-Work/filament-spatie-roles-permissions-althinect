@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Solution-Work\\FilamentSpatieRolesPermissions\\": "src"
+            "Althinect\\FilamentSpatieRolesPermissions\\": "src"
         }
     },
     "autoload-dev": {
@@ -38,7 +38,6 @@
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true
@@ -46,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "solution-work\\FilamentSpatieRolesPermissions\\FilamentSpatieRolesPermissionsServiceProvider"
+                "Althinect\\FilamentSpatieRolesPermissions\\FilamentSpatieRolesPermissionsServiceProvider"
             ],
             "aliases": {
-                "FilamentSpatieRolesPermissions": "Solution-Work\\FilamentSpatieRolesPermissions\\FilamentSpatieRolesPermissionsFacade"
+                "FilamentSpatieRolesPermissions": "Althinect\\FilamentSpatieRolesPermissions\\FilamentSpatieRolesPermissionsFacade"
             }
         }
     }
